@@ -85,79 +85,71 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
+
 	<div ng-controller="PageController">
-	<!-- <div ng-controller="TestController"> -->
+		<!-- <div ng-controller="TestController"> -->
 
 		<!-- <div class="container" lazy-scroll="listData()" lazy-scroll-trigger="50" ng-repeat="data in testData" > -->
 		<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-md-8 col-lg- 6 col-lg-offset-2 col-sm-offset-0 col-md-offset-2">
-				<div  class="thumbnail" ng-repeat ="discussion in discussions" ng-controller="DiscussionController">
+			<div class="row">
+				<div class="col-sm-6 col-md-8 col-lg- 6 col-lg-offset-2 col-sm-offset-0 col-md-offset-2">
+					<div  class="thumbnail" ng-repeat ="discussion in discussions" ng-controller="DiscussionController">
 
-					<div>
-						<div class="clearfix">
-							<div class="pull-left">
-								<img src="../images/cover.jpg" class="img-reponsive pull-left" style="border-radius: 50%; border:0px;  width: 70px; height: 70px; padding:1px;" alt="Responsive image">
-							</div>
-							<div >
+						<div>
+							<div class="clearfix">
+								<div class="pull-left">
+									<img src="../images/cover.jpg" class="img-reponsive pull-left" style="border-radius: 50%; border:0px;  width: 70px; height: 70px; padding:1px;" alt="Responsive image">
+								</div>
+								<div >
 									<h3 style="color:#263238;">
 										{{discussion.user.name}}
 										<small style="color:#78909c;"><p>{{discussion.user.tag_line}}</p></small>
 									</h3>
 
-							</div>
-							<div class="col-sm-4 col-md-4 col-sm-offset-0 col-md-offset-1"  style="padding-bottom:5px;" >
-								<span class="badge" ng-repeat ="tag in discussion.tags" style="margin-left:2px;">{{tag.name}}</span>
+								</div>
+								<div class="col-sm-4 col-md-4 col-sm-offset-0 col-md-offset-1"  style="padding-bottom:5px;" >
+									<span class="badge" ng-repeat ="tag in discussion.tags" style="margin-left:2px;">{{tag.name}}</span>
+
+								</div>
 
 							</div>
 
-						</div>
-
-						<div class="clearfix" >
-						<p style="color:#455a64">{{discussion.full_description}}</p>
-						</div>
+							<div class="clearfix" >
+								<p style="color:#455a64">{{discussion.full_description}}</p>
+							</div>
 
 							<!-- Directive -->
-						<div gallery-slider ng-controller="AlbumCtrl" ng-show="tog"></div>
+							<!-- <div gallery-slider ng-controller="AlbumCtrl" ng-show="tog"></div> -->
 
-						<!-- Number of Likes -->
+							<!-- Number of Likes -->
 
 
-						<section class="caption"  >
-							<div class="">
-								<div  style="padding-right:14px;">
-									<span>{{discussion.answer_text}}</span>
-									<span style="float:right;"> {{discussion.no_helpful}} helpful</span>&nbsp
-                                    <span style="float:right;"> {{discussion.answers.length}} answers</span>
-									<!-- <span style="color:red;">{{discussion.is_helpful}}</span> -->
-								</div>
-								<hr style="margin-top:-0.5px;">
-								<ul class="nav nav-pills" style=" margin-top:-5px;">
-									<li>
-										<a href ng-click="increaseHelpful(discussion) " style="color:#2196f3;" ><span class="glyphicon glyphicon-heart" style="font-size:15px;">&nbsp<b>Helpful</b></span></a>
-									</li>
-									<li ng-class= "{comment:tab === 2}">
-										<a href ng-click="selectTab(2)" style="color:#2196f3;" ><span class="glyphicon glyphicon-comment" style="font-size:15px;">&nbsp<b>Comment</b></span></a>
-									</li>
-								</ul>
+							<section class="caption"  >
+								<div class="">
+									<div  style="padding-right:14px;">
+										<span>{{discussion.answer_text}}</span>
+										<span style="float:right ; font-size:18px;color:#009b86; border-radius:50%; padding-left:5px;" class="glyphicon glyphicon-heart" aria-hidden="true">&nbsp<b>{{discussion.no_helpful}}</b></span>
+										<span style="float:right;  font-size:18px;color:#009b86;" class="glyphicon glyphicon-comment" aria-hidden="true">&nbsp<b>{{discussion.answers.length}}</b></span>
+									</div>
+									<hr style="margin-top:-0.5px;">
+									<ul class="nav nav-pills" style=" margin-top:-5px;">
+										<li>
+											<a href ng-click="increaseHelpful(discussion) " style="color:#2196f3;" ><span class="glyphicon glyphicon-heart" style="font-size:15px;">&nbsp<b>Helpful</b></span></a>
+										</li>
+										<li ng-class= "{comment:tab === 1}">
+											<a href ng-click="selectTab(1)" style="color:#2196f3;" ><span class="glyphicon glyphicon-comment" style="font-size:15px;">&nbsp<b>Comment</b></span></a>
+										</li>
+									</ul>
 									<hr>
-							</div>
-
+								</div>
 							</section>
-					</div>
-
-
-
-						<div comment-section ng-show ="isSelected(2)"> </div>
-
+						</div>
+						<div comment-section ng-show ="isSelected(1)"> </div>
 					</div>
 				</div>
 			</div>
-
+		</div>
 		<!-- </div> -->
-</div>
-
-
 	</div>
 
 

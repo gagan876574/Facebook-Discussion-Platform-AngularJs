@@ -4,7 +4,7 @@
   <div style="border-left:2px solid rgb(88, 144, 255); padding-left:5px;"  class="cleafix">
   <div>
       <div ng-repeat="reply in answer.replies">
-        <img src="../images/cover.jpg" class="img-reponsive pull-left"
+        <img ng-src="{{reply.user.image}}" class="img-reponsive pull-left"
         style=" width: 20px; height: 20px;border: 1px solid rgba(0, 0, 0, .1);bottom: 0;content: '';left: 0;right: 0;top: 0; margin-left:2px;"
         alt="Responsive image"></img>
         <div class="" style="overflow:auto; padding:5px;" spacing="small">
@@ -13,17 +13,15 @@
           <!-- {{ rep.text}} -->
             <!-- <p ng-if="object.helpful == 1"><span class="glyphicon glyphicon-heart" style="color:rgb(88, 144, 255);">{{object.helpful }}</span> </p> -->
         </div>
-        <div class="">
-          <ul class="nav nav-pills"reply-links></ul>
-          {{reply.no_helpful}}
-        </div>
+          <div class ="clearfix" style="margin : 10px 0 10px 10px;"reply-links>
+          </div>
       </div>
     </div>
 
     <!-- <div class="clearfix" ng-if="object.replyone"> -->
-<div class="clearfix">
+<div class="clearfix" ng-if="_reply.replyone">
       <div>
-        <img src="../images/cover.jpg" class="img-reponsive pull-left"
+        <img src="{{answer.user.image}}" class="img-reponsive pull-left"
         style=" width: 22px; height: 22px;border: 1px solid rgba(0, 0, 0, .1);bottom: 0;content: '';left: 0;right: 0;top: 0;margin-left:2px;"
         alt="Responsive image"></img>
       </div>
