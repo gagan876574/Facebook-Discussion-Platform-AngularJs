@@ -129,12 +129,12 @@
 									<span>{{discussion.answer_text}}</span>
 									<span style="float:right;"> {{discussion.no_helpful}} helpful</span>&nbsp
                                     <span style="float:right;"> {{discussion.answers.length}} answers</span>
-									<span style="color:red;">{{discussion.is_helpful}}</span>
+									<!-- <span style="color:red;">{{discussion.is_helpful}}</span> -->
 								</div>
 								<hr style="margin-top:-0.5px;">
 								<ul class="nav nav-pills" style=" margin-top:-5px;">
-									<li ng-class="{comment:like === 1 }" >
-										<a href ng-click="selectLike(1) " style="color:#2196f3;" ><span class="glyphicon glyphicon-heart" style="font-size:15px;">&nbsp<b>Helpful</b></span></a>
+									<li>
+										<a href ng-click="increaseHelpful(discussion) " style="color:#2196f3;" ><span class="glyphicon glyphicon-heart" style="font-size:15px;">&nbsp<b>Helpful</b></span></a>
 									</li>
 									<li ng-class= "{comment:tab === 2}">
 										<a href ng-click="selectTab(2)" style="color:#2196f3;" ><span class="glyphicon glyphicon-comment" style="font-size:15px;">&nbsp<b>Comment</b></span></a>

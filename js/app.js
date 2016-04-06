@@ -18,7 +18,6 @@ app.controller("DiscussionController", function($scope) {
         }
     };
     $scope.answer = JSON.parse(JSON.stringify($scope._answer));
-
     function handleImagesLoaded(data, status) {
         $scope.images = data;
         $scope.currentImage = _.first($scope.images);
@@ -52,11 +51,11 @@ app.controller("DiscussionController", function($scope) {
     $scope.isSelectedSubLike = function(checkTab) {
         return $scope.subLike === checkTab;
     };
-    $scope.increaseHelpful = function(object) {
-        object.helpful += 1;
-        if (object.helpful > 1) {
-            object.helpful = 0;
-        }
+
+    $scope.increaseHelpful = function(todo) {
+        todo.no_helpful += 1;
+        // console.log(todo.no_helpful);
+
     };
     $scope.increaseReply = function(object) {
         object.replyone += 1;
@@ -221,6 +220,14 @@ app.directive('replyLinks', function() {
         restrict: 'A',
         scope: true,
         templateUrl: '../templates/reply-links.html'
+    }
+});
+
+app.directive('commentLinks', function() {
+    return {
+        restrict: 'A',
+        scope: true,
+        templateUrl: '../templates/comment-links.html'
     }
 });
 

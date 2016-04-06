@@ -11,10 +11,11 @@
           <a href="#"><span><b>{{reply.user.name}}</b></span></a>
           {{reply.text}}
           <!-- {{ rep.text}} -->
-            <!-- <p ng-if="object.helpful == 1"><span class="glyphicon glyphicon-heart" style="color:rgb(88, 144, 255);">{{ object.helpful }}</span> </p> -->
+            <!-- <p ng-if="object.helpful == 1"><span class="glyphicon glyphicon-heart" style="color:rgb(88, 144, 255);">{{object.helpful }}</span> </p> -->
         </div>
         <div class="">
-          <ul reply-links></ul>
+          <ul class="nav nav-pills"reply-links></ul>
+          {{reply.no_helpful}}
         </div>
       </div>
     </div>
