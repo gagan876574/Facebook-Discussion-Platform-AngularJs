@@ -5,9 +5,10 @@ app.controller("DiscussionController", function($scope) {
     $scope.like = null;
     $scope.subLike = null;
     $scope._answer = {
-        is_helpful: 0,
+        is_helpful: false,
         replies: [],
         no_replies: 0,
+        no_helpful: 0,
         text: null,
         user: {
             "username": "ddipashri",
@@ -53,7 +54,12 @@ app.controller("DiscussionController", function($scope) {
     };
 
     $scope.increaseHelpful = function(todo) {
-        todo.no_helpful += 1;
+        if (todo.is_helpful) {
+            todo.no_helpful -= 1;
+        } else {
+            todo.no_helpful += 1;
+        }
+        todo.is_helpful = !todo.is_helpful;
         // console.log(todo.no_helpful);
 
     };
@@ -195,7 +201,7 @@ app.controller('PeopleCtrl', function($scope, $http) {
 app.controller('AnswerController', function($scope) {
     $scope._reply = {
         text: null,
-        helpful: 0,
+        no_helpful: 0,
         replyone: 0
     };
 
