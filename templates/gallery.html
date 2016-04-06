@@ -2,17 +2,17 @@
     <ol class="carousel-indicators" >
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 
-      <li ng-repeat="image in images" ng-if="image.description != '1'"  data-target="#myCarousel" data-slide-to="{{image.description}}"></li>
+      <li ng-repeat="image in discussion.images" ng-if="$index == 0"  data-target="#myCarousel" data-slide-to="{{image.description}}"></li>
     </ol>
 
     <div class="carousel-inner" role="listbox" >
 
-      <div class="item active"  ng-repeat="image in images" ng-if="image.description == '1'">
-        <img  ng-src="{{image.image}}" alt="{{image.description}}"></img>
+      <div class="item active"  ng-repeat="image in discussion.images" ng-if="$index == 0">
+        <img  ng-src="{{image.url}}" alt="{{image.description}}"></img>
       </div>
 
-      <div class="item " ng-repeat="image in images" ng-if="image.description != '1'"  style="overflow:auto; height:370px" >
-        <img ng-src="{{image.image}}" alt="{{image.description}}"></img>
+      <div class="item " ng-repeat="image in discussion.images" ng-if="$index > 0"  style="overflow:auto; height:370px" >
+        <img ng-src="{{image.url}}" alt="{{image.description}}"></img>
       </div>
     </div>
 

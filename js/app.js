@@ -19,6 +19,14 @@ app.controller("DiscussionController", function($scope) {
     };
     $scope.answer = JSON.parse(JSON.stringify($scope._answer));
 
+    function handleImagesLoaded(data, status) {
+        $scope.images = data;
+        $scope.currentImage = _.first($scope.images);
+    }
+    $scope.setCurrentImage = function(image) {
+        $scope.currentImage = image;
+    };
+
 
     $scope.selectLike = function(setTab) {
         $scope.like = setTab;
