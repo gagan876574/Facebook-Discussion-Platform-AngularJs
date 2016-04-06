@@ -1,5 +1,5 @@
 <div style="background-color:#f6f7f8;">
-  <form ng-submit="addEmpp(todo)" >
+  <form ng-submit="addEmpp()" >
      <!-- <form> -->
     <div class="clearfix">
       <div>
@@ -10,21 +10,21 @@
       <div>
         <input tabindex="-1"
         style="overflow: auto; outline: none; max-height: 350px; min-height:32px; margin-top:1px; margin-left:2px;" class ="col-sm-11 col-md-11 col-lg-11"
-        ng-model="comment.text"
-        name="comment.text" placeholder="Write a comment" />
+        ng-model="answer.text"
+        name="answer.text" placeholder="Write an answer" />
       </div>
     </div>
     <hr>
 
     <!-- <div ng-repeat="(index,object) in people" class="cleafix" style="margin-top:5px;"> -->
       <div >
-      <div ng-repeat="comment in todo.answers">
+      <div ng-repeat="answer in todo.answers">
         <img src="../images/cover.jpg" class="img-reponsive pull-left"
         style=" width: 32px; height: 32px;border: 1px solid rgba(0, 0, 0, .1);bottom: 0;content: '';left: 0;right: 0;top: 0;margin-left:2px;"
         alt="Responsive image"></img>
         <div class="" style="overflow:auto; padding-left:5px;" spacing="small">
-          <a href="#"><span style="color:#2196f3;"><b>{{comment.user.name}}</b></span></a>
-          {{comment.text}}
+          <a href="#"><span style="color:#2196f3;"><b>{{answer.user.name}}</b></span></a>
+          {{answer.text}}
           <!-- <p ng-if="object.helpful == 1"> <span class="glyphicon glyphicon-heart" style="color:rgb(88, 144, 255);">{{ object.helpful }}</span></p> -->
         </div>
         <div class="">
