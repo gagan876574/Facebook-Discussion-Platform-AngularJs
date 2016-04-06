@@ -42,6 +42,17 @@ app.controller("TabController", function($scope) {
    object.replyone +=1;
  }
 
+     $scope.addEmpp = function(todo){
+
+      // var value = $scope.todos.answers.text;
+      // $scope.todos.forEach(function(){
+
+        $scope.answer = {text:$scope.comment.text};
+        todo.answers.push($scope.answer);
+      // });
+    }
+
+
 });
 
 // app.controller('TodoCtrl', function($scope, $http) {
@@ -57,6 +68,7 @@ app.controller("TabController", function($scope) {
 // });
 
 
+
 app.controller('TodoCtrl', function($scope, $http){
     $http.get('../sample.json').success(function (data){
         $scope.todos = data;
@@ -64,14 +76,14 @@ app.controller('TodoCtrl', function($scope, $http){
     $scope.comment={
         text:null
     };
-    $scope.answer =[];
+    $scope.answer ={};
     $scope.addEmp = function(){
 
       // var value = $scope.todos.answers.text;
       // $scope.todos.forEach(function(){
 
-        $scope.answer.push({text:$scope.comment.text});
-        $scope.todos.push($scope.answer);
+        $scope.answer = {text:$scope.comment.text};
+        $scope.answers.push($scope.answer);
       // });
     }
 
@@ -93,6 +105,16 @@ app.controller('TestController', function($scope) {
     var reachLast = false;
     $scope.loadmore = "Loading More data..";
      $scope.testData = [];
+
+     $scope.addEmpp = function(){
+
+      // var value = $scope.todos.answers.text;
+      // $scope.todos.forEach(function(){
+
+        $scope.answer = {text:$scope.comment.text};
+        $scope.answers.push($scope.answer);
+      // });
+    }
 
 
      $scope.listData = function() {
