@@ -1,5 +1,5 @@
 <div style="background-color:#f6f7f8;">
-  <form ng-submit="addEmpp()" >
+  <form ng-submit="addAnswer(discussion)" >
      <!-- <form> -->
     <div class="clearfix">
       <div>
@@ -18,7 +18,7 @@
 
     <!-- <div ng-repeat="(index,object) in people" class="cleafix" style="margin-top:5px;"> -->
       <div >
-      <div ng-repeat="answer in todo.answers">
+      <div ng-repeat="answer in discussion.answers" ng-controller="AnswerController">
         <img src="../images/cover.jpg" class="img-reponsive pull-left"
         style=" width: 32px; height: 32px;border: 1px solid rgba(0, 0, 0, .1);bottom: 0;content: '';left: 0;right: 0;top: 0;margin-left:2px;"
         alt="Responsive image"></img>

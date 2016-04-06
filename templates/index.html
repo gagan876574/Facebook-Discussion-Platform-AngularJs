@@ -85,14 +85,14 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
-	<div ng-controller="TodoCtrl">
+	<div ng-controller="PageController">
 	<!-- <div ng-controller="TestController"> -->
 
 		<!-- <div class="container" lazy-scroll="listData()" lazy-scroll-trigger="50" ng-repeat="data in testData" > -->
 		<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-md-8 col-lg- 6 col-lg-offset-2 col-sm-offset-0 col-md-offset-2">
-				<div  class="thumbnail" ng-repeat ="todo in todos" ng-controller="TabController">
+				<div  class="thumbnail" ng-repeat ="discussion in discussions" ng-controller="DiscussionController">
 
 					<div>
 						<div class="clearfix">
@@ -101,26 +101,26 @@
 							</div>
 							<div >
 									<h3 style="color:#263238;">
-										{{todo.user.name}}
-										<small style="color:#78909c;"><p>{{todo.user.tag_line}}</p></small>
+										{{discussion.user.name}}
+										<small style="color:#78909c;"><p>{{discussion.user.tag_line}}</p></small>
 									</h3>
 
 							</div>
 							<div class="col-sm-4 col-md-4 col-sm-offset-0 col-md-offset-1"  style="padding-bottom:5px;" >
-								<span class="badge" ng-repeat ="tag in todo.tags" style="margin-left:2px;">{{tag.name}}</span>
+								<span class="badge" ng-repeat ="tag in discussion.tags" style="margin-left:2px;">{{tag.name}}</span>
 
 							</div>
 
 						</div>
 
 						<div class="clearfix" >
-						<p style="color:#455a64">{{todo.full_description}}</p>
+						<p style="color:#455a64">{{discussion.full_description}}</p>
 						</div>
 
 							<!-- Directive -->
 						<!-- <div gallery-slider ng-controller ="AlbumCtrl" ng-show="tog"></div> -->
 
-							<div ng-repeat="image in todo.images">
+							<div ng-repeat="image in discussion.images">
 									<!-- <img ng-src="{{image.url}}" alt="" /> -->
 							</div>
 						<!-- Number of Likes -->
@@ -129,9 +129,9 @@
 						<section class="caption"  >
 							<div class="">
 								<div  style="padding-right:14px;">
-									<span>{{todo.answer_text}}</span>
-									<span style="float:right;"> {{todo.no_helpful}} helpful answers</span>
-									<span style="color:red;">{{todo.is_helpful}}</span>
+									<span>{{discussion.answer_text}}</span>
+									<span style="float:right;"> {{discussion.no_helpful}} helpful answers</span>
+									<span style="color:red;">{{discussion.is_helpful}}</span>
 								</div>
 								<hr style="margin-top:-0.5px;">
 								<ul class="nav nav-pills" style=" margin-top:-5px;">

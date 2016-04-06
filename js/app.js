@@ -1,10 +1,10 @@
 var app = angular.module("myDiscuss", ['lazy-scroll']);
-app.controller("TabController", function($scope) {
+app.controller("DiscussionController", function($scope) {
     $scope.tab = null;
     $scope.subTab = null;
     $scope.like = null;
     $scope.subLike = null;
-    $scope.answer = {
+    $scope._answer = {
         is_helpful: 0,
         replies: [],
         no_replies: 0,
@@ -16,7 +16,8 @@ app.controller("TabController", function($scope) {
             "name": "Dr. Dipashri",
             "tag_line": "Obstetric and Gynaecology"
         }
-    }
+    };
+    $scope.answer = JSON.parse(JSON.stringify($scope._answer));
 
 
     $scope.selectLike = function(setTab) {
@@ -53,9 +54,16 @@ app.controller("TabController", function($scope) {
         object.replyone += 1;
     }
 
-    $scope.addEmpp = function(todo) {
+    $scope.addAnswer = function(todo) {
         todo.answers.push($scope.answer);
+        $scope.answer = JSON.parse(JSON.stringify($scope._answer));
     }
+});
+
+app.controller('PageController', function($scope, $http){
+    $http.get('../sample.json').success(function (data){
+        $scope.discussions = data;
+    });
 });
 
 
@@ -177,17 +185,18 @@ app.controller('PeopleCtrl', function($scope, $http) {
 });
 
 
-app.controller('BlockController', function($scope) {
-    $scope.replysubmit = function(comment) {
-        if ($scope.reply.comment) {
-            $scope.replybox = {
-                text: $scope.reply.comment,
-                helpful: 0,
-                replyone: 0
-            };
-            comment.replies.push($scope.replybox);
-        }
-        $scope.reply.comment = '';
+app.controller('AnswerController', function($scope) {
+    $scope._reply = {
+        text: null,
+        helpful: 0,
+        replyone: 0
+    };
+
+    $scope.reply = JSON.parse(JSON.stringify($scope._reply));
+
+    $scope.replysubmit = function(answer) {
+        answer.replies.push($scope.reply);
+        $scope.reply = JSON.parse(JSON.stringify($scope._reply));
     };
 });
 
