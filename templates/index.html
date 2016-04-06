@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Jquery  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- custom.css -->
+	<link rel="stylesheet" type="text/css" href="../css/custom.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Angular JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="../js/app.js"></script>
+	<script src="../js/lazy-scroll.js"></script>
+	<!-- <script src="../js/album.js"></script> -->
+
+
+</head>
+<title>Discussion</title>
+<body  ng-app="myDiscuss">
+
+<nav class="navbar navbar-inverse" style="border-radius: 0px;">
+		<div class="container-fluid" >
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img style="border:0px; margin-top:-10px;" src="https://curofy-static.s3.amazonaws.com/web/images/main/Curofy_white.png" width="120px" height="41px" style="margin-top:-10px;"></a>
+				<!-- <small style="background-color: white;">Discussion Forum</small> -->
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<!-- <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul> -->
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+				<!-- <ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul> -->
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div ng-controller="TodoCtrl">
+	<!-- <div ng-controller="TestController"> -->
+
+		<!-- <div class="container" lazy-scroll="listData()" lazy-scroll-trigger="50" ng-repeat="data in testData" > -->
+		<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-8 col-lg- 6 col-lg-offset-2 col-sm-offset-0 col-md-offset-2">
+				<div  class="thumbnail" ng-repeat ="todo in todos" ng-controller="TabController">
+
+					<div>
+						<div class="clearfix">
+							<div class="pull-left">
+								<img src="../images/cover.jpg" class="img-reponsive pull-left" style="border-radius: 50%; border:0px;  width: 70px; height: 70px; padding:1px;" alt="Responsive image">
+							</div>
+							<div >
+									<h3 style="color:#263238;">
+										{{todo.user.name}}
+										<small style="color:#78909c;"><p>{{todo.user.tag_line}}</p></small>
+									</h3>
+
+							</div>
+							<div class="col-sm-4 col-md-4 col-sm-offset-0 col-md-offset-1"  style="padding-bottom:5px;" >
+								<span class="badge" ng-repeat ="tag in todo.tags" style="margin-left:2px;">{{tag.name}}</span>
+
+							</div>
+
+						</div>
+
+						<div class="clearfix" >
+						<p style="color:#455a64">{{todo.full_description}}</p>
+						</div>
+
+							<!-- Directive -->
+						<!-- <div gallery-slider ng-controller ="AlbumCtrl" ng-show="tog"></div> -->
+
+							<div ng-repeat="image in todo.images">
+									<!-- <img ng-src="{{image.url}}" alt="" /> -->
+							</div>
+						<!-- Number of Likes -->
+
+
+						<section class="caption"  >
+							<div class="">
+								<div  style="padding-right:14px;">
+									<span>{{todo.answer_text}}</span>
+									<span style="float:right;"> {{todo.no_helpful}} helpful answers</span>
+									<span style="color:red;">{{todo.is_helpful}}</span>
+								</div>
+								<hr style="margin-top:-0.5px;">
+								<ul class="nav nav-pills" style=" margin-top:-5px;">
+									<li ng-class="{comment:like === 1 }" >
+										<a href ng-click="selectLike(1) " style="color:#2196f3;" ><span class="glyphicon glyphicon-heart" style="font-size:15px;">&nbsp<b>Helpful</b></span></a>
+									</li>
+									<li ng-class= "{comment:tab === 2}">
+										<a href ng-click="selectTab(2)" style="color:#2196f3;" ><span class="glyphicon glyphicon-comment" style="font-size:15px;">&nbsp<b>Comment</b></span></a>
+									</li>
+								</ul>
+									<hr>
+							</div>
+
+							</section>
+					</div>
+
+
+
+						<div comment-section ng-show ="isSelected(2)"> </div>
+
+					</div>
+				</div>
+			</div>
+
+		<!-- </div> -->
+</div>
+
+
+	</div>
+
+
+</body>
+</html>

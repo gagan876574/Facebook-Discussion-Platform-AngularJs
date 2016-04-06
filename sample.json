@@ -1,0 +1,197 @@
+[{
+    "is_helpful": false,
+    "tags": [
+      {
+        "name": "Gynecology",
+        "tag_id": 66
+      }
+    ],
+    "answers": [
+      {
+        "is_helpful": false,
+        "text": "if it is confirmed. .bartholine cyst abcess. ....first u should start iv antimicrobial. ....and  u hv to operate it...i.e.do marsupilisation...cause if it is not releavet...due to ascending infection through vagina...pt may abort...or if continued. ..chances of preterm labour is high...and redness is seen over labia...so apply...mgso4  +glycerine dressing over external side ....",
+        "no_replies": 2,
+        "user": {
+          "username": "ddipashri",
+          "image": "",
+          "is_following": false,
+          "name": "Dr. Dipashri",
+          "tag_line": "Obstetric and Gynaecology"
+        },
+        "replies": [
+          {
+            "no_helpful": 0,
+            "text": "How to confirm it as bartholin's abscess?",
+            "reply_id": 4163,
+            "user": {
+              "username": "snath11",
+              "image": "https://media.curofy.com/ae6bf263e6e0d5b14bd84e380466369b.jpg",
+              "is_following": false,
+              "name": "Dr. Sudhanshu Sekhar Nath",
+              "tag_line": "Obstetrics & Gynecology"
+            },
+            "is_helpful": false
+          },
+          {
+            "no_helpful": 0,
+            "text": "you can send the excised tissue for biooc",
+            "reply_id": 4408,
+            "user": {
+              "username": "nsunkara",
+              "image": "",
+              "is_following": false,
+              "name": "Dr. Narasavani Sunkara",
+              "tag_line": "Top Contributor in Gynecology"
+            },
+            "is_helpful": false
+          }
+        ],
+        "no_helpful": 1,
+        "is_accepted": true,
+        "answer_id": 88711
+      },
+      {
+        "is_helpful": false,
+        "user": {
+          "username": "mpawar9",
+          "image": "",
+          "is_following": false,
+          "name": "Dr. Madhuri Pawar",
+          "tag_line": "Obstetrics & Gynecology"
+        },
+        "replies": [],
+        "no_helpful": 0,
+        "text": "iv antibiotics and drainage",
+        "no_replies": 0,
+        "is_accepted": false,
+        "answer_id": 88869
+      },
+      {
+        "is_helpful": false,
+        "user": {
+          "username": "hfathima",
+          "image": "",
+          "is_following": false,
+          "name": "Dr. Hoor Fathima",
+          "tag_line": "Obstetrics & Gynecology"
+        },
+        "replies": [],
+        "no_helpful": 0,
+        "text": "incision n drainage along with i v antiviotics",
+        "no_replies": 0,
+        "is_accepted": false,
+        "answer_id": 88878
+      },
+      {
+        "is_helpful": false,
+        "user": {
+          "username": "nraghuwanshi",
+          "image": "https://media.curofy.com/ce1d21a0fb4a0bd8926b725013aac5bf.jpg",
+          "is_following": false,
+          "name": "Dr. Neethika Raghuwanshi",
+          "tag_line": "Top Contributor in Gynecology"
+        },
+        "replies": [],
+        "no_helpful": 0,
+        "text": "yes agree to Dr dipashri should go for marsupilisation under cover of antibiotics as drainage of pus is the rule.patient will improve dramatically from pain.",
+        "no_replies": 0,
+        "is_accepted": false,
+        "answer_id": 88902
+      },
+      {
+        "is_helpful": false,
+        "user": {
+          "username": "rverma4",
+          "image": "",
+          "is_following": false,
+          "name": "Dr. Rashmi Verma",
+          "tag_line": "Top Contributor in Gynecology"
+        },
+        "replies": [],
+        "no_helpful": 0,
+        "text": "agree with Dr dipashri",
+        "no_replies": 0,
+        "is_accepted": false,
+        "answer_id": 89182
+      },
+      {
+        "is_helpful": false,
+        "user": {
+          "username": "pbalsarkar",
+          "image": "",
+          "is_following": false,
+          "name": "Dr. Padmashree Balsarkar",
+          "tag_line": "Obstetrics & Gynecology"
+        },
+        "replies": [],
+        "no_helpful": 0,
+        "text": "incision and drainage",
+        "no_replies": 0,
+        "is_accepted": false,
+        "answer_id": 90205
+      }
+    ],
+    "full_description": "Hi all, this pt came to a gp who sent me the image.. \nshe has such swelling in rt labia.\nprobable diagnosis is bartholins abscess.. \nnow sue is 3 month pregnant..\nwhat will be the ryt rx..\niv antibiotics or incision n drainage?? ",
+    "no_answers": 6,
+    "special_text": "",
+    "images": [
+      {
+        "url": "https://media.curofy.com/15020.ab4749b513b950189a098b5997835281.jpg",
+        "width": 459,
+        "height": 816
+      }
+    ],
+    "answer_text": "<<Dr. Dipashri|profile|ddipashri>> and 5 others answered",
+    "user": {
+      "username": "apatil80",
+      "image": "",
+      "is_following": false,
+      "name": "Dr. Amol Patil",
+      "tag_line": "Obstetrics & Gynecology"
+    },
+    "accepted_answer": {
+      "is_helpful": false,
+      "text": "if it is confirmed. .bartholine cyst abcess. ....first u should start iv antimicrobial. ....and  u hv to operate it...i.e.do marsupilisation...cause if it is not releavet...due to ascending infection through vagina...pt may abort...or if continued. ..chances of preterm labour is high...and redness is seen over labia...so apply...mgso4  +glycerine dressing over external side ....",
+      "no_replies": 2,
+      "user": {
+        "username": "ddipashri",
+        "image": "",
+        "is_following": false,
+        "name": "Dr. Dipashri",
+        "tag_line": "Obstetric and Gynaecology"
+      },
+      "replies": [
+        {
+          "no_helpful": 0,
+          "text": "How to confirm it as bartholin's abscess?",
+          "reply_id": 4163,
+          "user": {
+            "username": "snath11",
+            "image": "https://media.curofy.com/ae6bf263e6e0d5b14bd84e380466369b.jpg",
+            "is_following": false,
+            "name": "Dr. Sudhanshu Sekhar Nath",
+            "tag_line": "Obstetrics & Gynecology"
+          },
+          "is_helpful": false
+        },
+        {
+          "no_helpful": 0,
+          "text": "you can send the excised tissue for biooc",
+          "reply_id": 4408,
+          "user": {
+            "username": "nsunkara",
+            "image": "",
+            "is_following": false,
+            "name": "Dr. Narasavani Sunkara",
+            "tag_line": "Top Contributor in Gynecology"
+          },
+          "is_helpful": false
+        }
+      ],
+      "no_helpful": 1,
+      "is_accepted": true,
+      "answer_id": 88711
+    },
+    "no_helpful": 0,
+    "discussion_id": 15020
+  }]

@@ -1,0 +1,16 @@
+function AlbumCtrl($scope) {
+$scope.images=[
+{ image : '../images/1.jpg',
+  thumbnail: ''
+},
+{ image : '../images/2.jpg',
+  thumbnail: ''
+},
+{ image : '../images/3.jpg',
+  thumbnail: ''
+},
+{ image : '../images/4.jpg',
+  thumbnail: ''
+}
+];
+}
