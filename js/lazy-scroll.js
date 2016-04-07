@@ -1,10 +1,3 @@
-/*
-** lazy-scroll v1.00
-** (c) shabeeb
-** mail@shabeebk.com
-* shabeebk.com/blog/lazy-scroll-infinite-scrolling-angularjs
-*
-*/
 angular.module("lazy-scroll",[])
         .directive('lazyScroll', [
                     '$rootScope',
