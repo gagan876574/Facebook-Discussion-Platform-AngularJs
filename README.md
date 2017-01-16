@@ -5,7 +5,7 @@ Clone the repository
 
 Make a simple python Http Server (python -m SimpleHTTPServer)
 
-Open browser run the server then got the template folder open index.html file
+Open browser run the server then go to the template folder open index.html file
 
 
 
